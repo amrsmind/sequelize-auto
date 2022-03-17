@@ -478,6 +478,9 @@ export class AutoGenerator {
     if (fieldObj.primaryKey) {
        return "DataTypes.UUID";
     }
+    if (fieldObj.foreignKey) {
+       return "DataTypes.UUID";
+    }
     if (!attrValue.toLowerCase) {
       console.log("attrValue", attr, attrValue);
       return attrValue;
